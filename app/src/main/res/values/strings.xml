@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">REME(REFRIGENERATOR MANAGEMENT)</string>
+  <string name="first_page">WELCOME</string>
+  <string name="second_page">DETAIL_PAGE</string>
+</resources>
