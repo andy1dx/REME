@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">REME(REFRIGENERATOR MANAGEMENT)</string>
+    <string name="first_page">WELCOME</string>
+    <string name="second_page">DETAIL_PAGE</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>
