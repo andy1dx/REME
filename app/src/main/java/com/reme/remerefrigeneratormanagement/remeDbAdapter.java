@@ -21,6 +21,19 @@ public class remeDbAdapter {
         return id;
     };
 
+    public long deleteSize(String name){
+        SQLiteDatabase db = remehelper.getWritableDatabase();
+
+        return db.delete(remeDbHelper.TABLE_PLACE,remeDbHelper.PLACE_NAME + "=?",new String[]{name});
+    }
+
+    public int checkSizeData() {
+        SQLiteDatabase db = remehelper.getWritableDatabase();
+        String[] columns = {remeDbHelper.PLACE_UID,remeDbHelper.PLACE_NAME,remeDbHelper.PLACE_STATUS};
+        Cursor cursor =db.query(remeDbHelper.TABLE_PLACE,columns,null,null,null,null,null);
+
+        return cursor.getCount();
+    }
     public String getSizeData()
     {
         SQLiteDatabase db = remehelper.getWritableDatabase();

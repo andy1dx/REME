@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".SecondPage" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".AddSizeRef"></activity>
+        <activity android:name=".AddSizeRef" />
+        <activity android:name=".Dashboard"></activity>
     </application>
 
 </manifest>

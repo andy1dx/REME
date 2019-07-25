@@ -1,5 +1,6 @@
 package com.reme.remerefrigeneratormanagement;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,7 +35,10 @@ public class AddSizeRef extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String text = sizeList.getItemAtPosition(position).toString();
-                Toast.makeText(AddSizeRef.this, ""+ text, Toast.LENGTH_SHORT).show();
+                helper.deleteSize(text);
+                listitem.clear();
+                viewSizeList();
+                Toast.makeText(AddSizeRef.this, text + " data is deleted", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -80,5 +84,10 @@ public class AddSizeRef extends AppCompatActivity {
             adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listitem);
             sizeList.setAdapter(adapter);
         }
+    }
+
+    public void go_to_next(View view){
+        Intent intent = new Intent (this, Dashboard.class);
+        startActivity(intent);
     }
 }
