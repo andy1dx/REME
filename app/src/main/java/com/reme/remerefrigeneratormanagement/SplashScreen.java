@@ -18,7 +18,7 @@ public class SplashScreen extends AppCompatActivity {
         try {
             //set time in milisecond
             Thread.sleep(3000);
-            startActivity(new Intent(SplashScreen.this, MainActivity.class));
+            startActivity(new Intent(SplashScreen.this, AddSizeRef.class));
 
         }catch (Exception e){
             e.printStackTrace();

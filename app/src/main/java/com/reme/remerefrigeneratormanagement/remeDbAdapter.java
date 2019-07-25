@@ -37,6 +37,14 @@ public class remeDbAdapter {
         return buffer.toString();
     }
 
+    public Cursor viewSizeData()
+    {
+        SQLiteDatabase db = remehelper.getReadableDatabase();
+        String query = "select * from "+ remeDbHelper.TABLE_PLACE;
+        Cursor cursor= db.rawQuery(query, null);
+
+        return cursor;
+    }
 
     static class remeDbHelper extends SQLiteOpenHelper
     {
